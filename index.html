@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>My Courses</title>
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>My Courses</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-lg="6" offset-lg="3">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>Courses and Reviews</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Course name</ion-label>
+                                    <ion-input type="text" id="course-name"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Course rating (1-5)</ion-label>
+                                    <ion-input type="number" id="course-rating"></ion-input>
+                                </ion-item>
+                                <div margin-vertical text-right>
+                                    <ion-button fill="outline" color="danger" id="btn-cancel">
+                                        <ion-icon name="close" slot="start"></ion-icon>Clear
+                                    </ion-button>
+                                    <ion-button id="btn-confirm">
+                                        <ion-icon name="add" slot="start"></ion-icon>Add Expense
+                                    </ion-button>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-list id="courses-list"></ion-list>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+        </ion-content>
+        <ion-alert-controller></ion-alert-controller>
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>
